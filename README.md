@@ -24,6 +24,12 @@ npm install
 npm test
 ```
 
+
+## ER Diagram
+![image](docs/ERD.png)
+
+## Tech stack
+
 ## Author
 
 👤 **Sam Rho**
