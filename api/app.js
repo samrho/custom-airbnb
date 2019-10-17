@@ -8,9 +8,9 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
 const app = express();
-const models = require("./models/index.js");
+const models = require("./db/models/index.js");
 models.sequelize
-	.sync()
+	.sync({force: true})
 	.then(() => {
 		console.log("DB connection success");
 	})
