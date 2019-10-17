@@ -10,11 +10,11 @@ module.exports = {
       price: 50000,
       country: "KOREA",
       city: "SEOUL",
-      bathroomCount: 1,
-      bedroomCount: 1,
-      kitchenCount: 1,
-      parkingPrice: 0,
-      isInternetAvailable: 1
+      bathroom_count: 1,
+      bedroom_count: 1,
+      kitchen_count: 1,
+      parking_price: 0,
+      is_internet_available: 1
     },{
       user_id: 2,
       name: '온천장 집',
@@ -23,11 +23,11 @@ module.exports = {
       price: 48000,
       country: "KOREA",
       city: "BUSAN",
-      bathroomCount: 1,
-      bedroomCount: 2,
-      kitchenCount: 1,
-      parkingPrice: -1,
-      isInternetAvailable: 1
+      bathroom_count: 1,
+      bedroom_count: 2,
+      kitchen_count: 1,
+      parking_price: -1,
+      is_internet_available: 1
     }, {
       user_id: 1,
       name: '무등산 집',
@@ -36,11 +36,11 @@ module.exports = {
       price: 60000,
       country: "KOREA",
       city: "GWANGJU",
-      bathroomCount: 2,
-      bedroomCount: 2,
-      kitchenCount: 1,
-      parkingPrice: 0,
-      isInternetAvailable: 1
+      bathroom_count: 2,
+      bedroom_count: 2,
+      kitchen_count: 1,
+      parking_price: 0,
+      is_internet_available: 1
     }], {});
   },
 

@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			maxGuest: {
+			max_guest: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
@@ -38,24 +38,24 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			bathroomCount: {
+			bathroom_count: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			bedroomCount: {
+			bedroom_count: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			kitchenCount: {
+			kitchen_count: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			parkingPrice: {
+			parking_price: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			isInternetAvailable: {
-				type: DataTypes.BOOLEAN,
+			is_internet_available: {
+				type: DataTypes.TINYINT,
 				allowNull: false,
 			},
 		},
