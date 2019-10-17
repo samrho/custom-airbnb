@@ -40,6 +40,9 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
+			img: {
+				type: DataTypes.STRING,
+			},
 			bathroom_count: {
 				type: DataTypes.INTEGER,
 				allowNull: false,

@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
 				onDelete: 'CASCADE',
 				onUpdate: 'CASCADE'
 			},
-
 			room_id: {
 				type: DataTypes.INTEGER,
 				references: {
