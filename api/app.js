@@ -6,18 +6,18 @@ const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const authRouter = require("./routes/auth");
+
+// these need to put into a separate file.
+const passport = require("passport");
+const passportJWT = require("passport-jwt");
+
+const ExtractJwt = passportJWT.ExtractJwt;
+const JwtStrategy = passportJWT.Strategy;
 
 const app = express();
 const models = require("./db/models/index.js");
-models.sequelize
-	.sync({force: true})
-	.then(() => {
-		console.log("DB connection success");
-	})
-	.catch((err) => {
-		console.log("DB connection failure");
-		console.log(err);
-	});
+// models.sequelize.sync({force: false})
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-
+app.use("/auth", authRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	next(createError(404));
