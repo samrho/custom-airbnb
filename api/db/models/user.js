@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true
 			},
 			email: {
-				field: "email",
 				type: DataTypes.STRING(50),
 				unique: true,
 				allowNull: false,
