@@ -1,11 +1,11 @@
 'use strict';
-const dummyRoom = require("../dummy/room.dummy");
+const dummyRoom = require('../dummy/room.dummy');
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Room', dummyRoom, {});
-  },
+	up: (queryInterface, Sequelize) => {
+		return queryInterface.bulkInsert('Room', dummyRoom, {});
+	},
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Room', null, {});
-  }
+	down: (queryInterface, Sequelize) => {
+		return queryInterface.bulkDelete('Room', null, {});
+	},
 };

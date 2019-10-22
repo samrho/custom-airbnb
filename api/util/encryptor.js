@@ -10,5 +10,5 @@ const encrypt = async (password, saltRounds = 2) => {
 };
 
 module.exports = {
-	encrypt
+	encrypt,
 };

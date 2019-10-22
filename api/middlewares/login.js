@@ -9,7 +9,7 @@ const checkToken = async (req, res, next) => {
 		console.log(req.cookies.JWT);
 	}
 	const { email, password } = req.body;
-	const user = await User.findOne({ where: { email } });
+	const user = await User.findOne({ where: { email: email } });
 	if (email === user.email && password === user.user_password) {
 		const token = jwt.sign({ email, password }, SECRET_KEY, { expiresIn });
 		return res.cookie("JWT", token, { httpOnly: false }).status(200).send({message: 'login success'})

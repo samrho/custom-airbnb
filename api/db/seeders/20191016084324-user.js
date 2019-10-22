@@ -5,7 +5,7 @@ module.exports = {
 		return queryInterface.bulkInsert('User', dummyUser, {});
 	},
 
-	is_internet_available: (queryInterface, Sequelize) => {
+	down: (queryInterface, Sequelize) => {
 		return queryInterface.bulkDelete('User', null, {});
-	}
+	},
 };
