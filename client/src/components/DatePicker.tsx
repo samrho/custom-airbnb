@@ -6,7 +6,7 @@ import "../styles/DatePicker.css";
 const DatePicker = () => {
 	const [startDate, setStartDate] = useState();
 	const [endDate, setEndDate] = useState();
-	const [focusedInput, setFocusedInput] = useState(startDate);
+	const [focusedInput, setFocusedInput] = useState();
 
 	return (
 		<div className="App">
