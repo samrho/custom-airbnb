@@ -8,7 +8,7 @@ const NavBar = () => {
 		display: flex;
 		position: sticky;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: left;
 		border-bottom: 1px solid #e4e4e4;
 	`;
 
