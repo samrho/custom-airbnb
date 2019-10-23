@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import App2 from './pages/Main';
+import './styles/App.scss';
 import NavBar from './components/navbar/NavBar';
+import DatePicker from './components/DatePicker';
+import FilterBar from './components/filter/FilterBar';
 const App: React.FC = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
 				<NavBar></NavBar>
+				<FilterBar></FilterBar>
+				<DatePicker></DatePicker>
 			</header>
 			<section></section>
 		</div>
