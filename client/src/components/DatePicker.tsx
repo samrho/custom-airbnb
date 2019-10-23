@@ -1,18 +1,18 @@
-import React, { Fragment, Component, useState } from 'react';
-import { DateRangePicker } from 'react-dates';
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-
+import React, { Fragment, Component, useState } from "react";
+import { DayPickerRangeController } from "react-dates";
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
+import "../styles/DatePicker.css";
 const DatePicker = () => {
 	const [startDate, setStartDate] = useState();
 	const [endDate, setEndDate] = useState();
-	const [focusedInput, setFocusedInput] = useState();
+	const [focusedInput, setFocusedInput] = useState(startDate);
 
 	return (
 		<div className="App">
-			<DateRangePicker
-				startDateId="startDate"
-				endDateId="endDate"
+			<DayPickerRangeController
+				// startDateId="startDate"
+				// endDateId="endDate"
 				startDate={startDate}
 				endDate={endDate}
 				onDatesChange={({ startDate, endDate }) => {

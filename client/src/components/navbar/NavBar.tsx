@@ -19,7 +19,7 @@ const NavBar = () => {
 	return (
 		<NavBarWrapper>
 			<LogoWrapper>
-				<Logo />
+				<Logo type="logo"></Logo>
 			</LogoWrapper>
 			<SearchBar></SearchBar>
 			<LinkWrapper></LinkWrapper>

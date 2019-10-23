@@ -21,8 +21,9 @@ const Button = styled.div`
 `;
 const FilterBtn: React.SFC<FilterProps> = (props) => {
 	const [active, setActive] = useState(false);
+	const toggle = () => setActive(!active);
 	return (
-		<Button active={active} onClick={() => setActive(!active)}>
+		<Button active={active} onClick={toggle}>
 			{props.name}
 		</Button>
 	);
