@@ -1,16 +1,15 @@
-import React, { CSSProperties, Fragment } from 'react';
-import { type } from 'os';
+import React, { CSSProperties, Fragment } from "react";
 
 interface LogoProps {
 	type: string;
 }
 const Logo: React.FC<LogoProps> = ({ type }) => {
 	const iconStyle: CSSProperties = {
-		height: '2.5rem',
-		width: '2.5rem',
-		fill: '#EC6564',
+		height: "2.5rem",
+		width: "2.5rem",
+		fill: "#EC6564",
 	};
-	if (type === 'logo') {
+	if (type === "logo") {
 		return (
 			<Fragment>
 				<svg
@@ -44,6 +43,6 @@ const Logo: React.FC<LogoProps> = ({ type }) => {
 };
 
 Logo.defaultProps = {
-	type: 'logo',
+	type: "logo",
 };
 export default Logo;

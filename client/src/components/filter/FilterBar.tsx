@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import FilterBtn from './FilterBtn';
+import React from "react";
+import styled from "styled-components";
+import FilterBtn from "./FilterBtn";
 type T = {
 	id: string;
 	name: string;
@@ -8,8 +8,8 @@ type T = {
 
 const FilterBarWrapper = styled.div`
 	display: flex;
-	margin-left: 80px;
-	padding: 8px 0;
+
+	padding: 8px 0 8px 20px;
 	flex-direction: row;
 	justify-content: left;
 	border-bottom: 1px solid #e4e4e4;
@@ -17,28 +17,24 @@ const FilterBarWrapper = styled.div`
 
 const filterList: Array<T> = [
 	{
-		id: 'date',
-		name: '날짜',
+		id: "date",
+		name: "날짜",
 	},
 	{
-		id: 'personnel',
-		name: '인원',
+		id: "personnel",
+		name: "인원",
 	},
 	{
-		id: 'type',
-		name: '숙소 유형',
+		id: "type",
+		name: "숙소 유형",
 	},
 	{
-		id: 'price',
-		name: '가격',
+		id: "price",
+		name: "가격",
 	},
 	{
-		id: 'immediate',
-		name: '즉시 예약',
-	},
-	{
-		id: 'addFilter',
-		name: '필터 추가하기',
+		id: "addFilter",
+		name: "필터 추가하기",
 	},
 ];
 
