@@ -1,22 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-	const room = sequelize.define(
+	const Room = sequelize.define(
 		"Room",
 		{
 			id: {
 				type: DataTypes.INTEGER,
 				autoIncrement: true,
-				primaryKey: true
+				primaryKey: true,
 			},
 			user_id: {
 				type: DataTypes.INTEGER,
 				references: {
-					model: 'User',
-					key: 'id',
+					model: "User",
+					key: "id",
 				},
-				onDelete: 'CASCADE',
-				onUpdate: 'CASCADE'
+				onDelete: "CASCADE",
+				onUpdate: "CASCADE",
 			},
-			name: {
+			title: {
+				type: DataTypes.STRING,
+				allowNull: false,
+			},
+			star: {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
@@ -24,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			max_guest: {
+			guest: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
@@ -32,35 +36,19 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			country: {
-				type: DataTypes.STRING,
-				allowNull: false,
-			},
-			city: {
-				type: DataTypes.STRING,
-				allowNull: false,
-			},
-			img: {
+			thumbnail: {
 				type: DataTypes.STRING,
 			},
-			bathroom_count: {
+			bathroom: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			bedroom_count: {
+			bedroom: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			kitchen_count: {
+			bed: {
 				type: DataTypes.INTEGER,
-				allowNull: false,
-			},
-			parking_price: {
-				type: DataTypes.INTEGER,
-				allowNull: false,
-			},
-			is_internet_available: {
-				type: DataTypes.TINYINT,
 				allowNull: false,
 			},
 		},
@@ -68,7 +56,15 @@ module.exports = (sequelize, DataTypes) => {
 			timestamps: false,
 			underscored: true,
 			freezeTableName: true,
-		}
+		},
 	);
-	return room;
+
+	Room.getAllRooms = async () => {
+		return Room.findAll({
+			where: {
+				guest: 4,
+			},
+		});
+	};
+	return Room;
 };
